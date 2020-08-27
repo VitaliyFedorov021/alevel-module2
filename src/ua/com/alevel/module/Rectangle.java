@@ -1,27 +1,28 @@
 package ua.com.alevel.module;
 
 public class Rectangle extends QuadrilateralImpl {
-    public void setSecondSide() {
-        this.secondSide = getFirstSide();
-    }
-
-    @Override
-    public double square() {
-        return firstSide * secondSide;
-    }
-
-    @Override
-    public double findHigh() {
+    public double getSide() {
         return firstSide;
     }
 
-    @Override
-    public double firstDiagonal() {
-        return Math.sqrt(firstSide * firstSide + secondSide * secondSide);
+    public void setSide(double firstSide) {
+        this.firstSide = firstSide;
+        this.secondSide = firstSide;
     }
 
-    @Override
-    public double secondDiagonal() {
-        return firstDiagonal();
+    public double getBigAngle() {
+        return bigAngle;
+    }
+
+    public void setBigAngle() {
+        this.bigAngle = 90;
+    }
+
+    public double getLessAngle() {
+        return lessAngle;
+    }
+
+    public void setLessAngle() {
+        this.lessAngle = 90;
     }
 }

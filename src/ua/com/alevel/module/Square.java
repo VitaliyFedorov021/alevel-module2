@@ -1,24 +1,22 @@
 package ua.com.alevel.module;
 
 public class Square extends QuadrilateralImpl {
-    @Override
-    public double square() {
-        return firstSide * firstSide;
-    }
-
-    @Override
-    public double findHigh() {
+    public double getSide() {
         return firstSide;
     }
 
-    @Override
-    public double firstDiagonal() {
-        return Math.sqrt(firstSide * firstSide + firstSide * firstSide);
+    public void setSide(double firstSide) {
+        this.firstSide = firstSide;
+        this.secondSide = firstSide;
     }
 
-    @Override
-    public double secondDiagonal() {
-        return firstDiagonal();
+    public double getAngle() {
+        return bigAngle;
+    }
+
+    public void setAngle() {
+        this.bigAngle = 90;
+        this.lessAngle = 90;
     }
 
 }
