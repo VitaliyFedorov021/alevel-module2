@@ -9,7 +9,11 @@ public class CircleImpl implements Circle {
     }
 
     public void setRadius(double radius) {
-        this.radius = radius;
+        if (radius <= 0) {
+            throw new RuntimeException("Radius can't be less than zero");
+        } else {
+            this.radius = radius;
+        }
     }
 
     public double getCentreAngle() {
@@ -17,7 +21,11 @@ public class CircleImpl implements Circle {
     }
 
     public void setCentreAngle(double centreAngle) {
-        this.centreAngle = centreAngle;
+        if (centreAngle <= 0) {
+            throw new RuntimeException("Angle can't be less than zero");
+        } else {
+            this.centreAngle = centreAngle;
+        }
     }
 
     @Override

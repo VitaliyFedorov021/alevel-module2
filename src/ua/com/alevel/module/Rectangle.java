@@ -6,23 +6,20 @@ public class Rectangle extends QuadrilateralImpl {
     }
 
     public void setSide(double firstSide) {
-        this.firstSide = firstSide;
-        this.secondSide = firstSide;
+        if (firstSide <= 0) {
+            throw new RuntimeException("Side can't be less than zero");
+        } else {
+            this.firstSide = firstSide;
+            this.secondSide = firstSide;
+        }
     }
 
-    public double getBigAngle() {
+    public double getAngle() {
         return bigAngle;
     }
 
-    public void setBigAngle() {
+    public void setAngle() {
         this.bigAngle = 90;
-    }
-
-    public double getLessAngle() {
-        return lessAngle;
-    }
-
-    public void setLessAngle() {
         this.lessAngle = 90;
     }
 }

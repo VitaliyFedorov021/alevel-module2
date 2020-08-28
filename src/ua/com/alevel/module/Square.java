@@ -6,8 +6,12 @@ public class Square extends QuadrilateralImpl {
     }
 
     public void setSide(double firstSide) {
-        this.firstSide = firstSide;
-        this.secondSide = firstSide;
+        if (firstSide <= 0) {
+            throw new RuntimeException("Side can't be less than zero");
+        } else {
+            this.firstSide = firstSide;
+            this.secondSide = firstSide;
+        }
     }
 
     public double getAngle() {

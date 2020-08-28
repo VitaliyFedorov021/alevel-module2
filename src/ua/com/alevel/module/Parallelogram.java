@@ -6,7 +6,11 @@ public class Parallelogram extends QuadrilateralImpl {
     }
 
     public void setFirstSide(double firstSide) {
-        this.firstSide = firstSide;
+        if (firstSide <= 0) {
+            throw new RuntimeException("Side can't be less than zero");
+        } else {
+            this.firstSide = firstSide;
+        }
     }
 
     public double getSecondSide() {
@@ -14,7 +18,11 @@ public class Parallelogram extends QuadrilateralImpl {
     }
 
     public void setSecondSide(double secondSide) {
-        this.secondSide = secondSide;
+        if (firstSide <= 0) {
+            throw new RuntimeException("Side can't be less than zero");
+        } else {
+            this.secondSide = secondSide;
+        }
     }
 
     public double getBigAngle() {
@@ -22,7 +30,11 @@ public class Parallelogram extends QuadrilateralImpl {
     }
 
     public void setBigAngle(double bigAngle) {
-        this.bigAngle = bigAngle;
+        if (bigAngle <= 0) {
+           throw new RuntimeException("Angle can't be less than zero");
+        } else {
+            this.bigAngle = bigAngle;
+        }
     }
 
     public double getLessAngle() {
@@ -30,9 +42,10 @@ public class Parallelogram extends QuadrilateralImpl {
     }
 
     public void setLessAngle(double lessAngle) {
-        if (getBigAngle() + lessAngle != 180) {
+        if (getBigAngle() + lessAngle != 180 || lessAngle <= 0) {
             throw new RuntimeException("Sum of 2 angels of parallelogram must equals 180 ");
+        } else {
+            this.lessAngle = lessAngle;
         }
-        this.lessAngle = lessAngle;
     }
 }
