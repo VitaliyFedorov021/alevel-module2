@@ -30,8 +30,8 @@ public class Parallelogram extends QuadrilateralImpl {
     }
 
     public void setBigAngle(double bigAngle) {
-        if (bigAngle <= 0) {
-           throw new RuntimeException("Angle can't be less than zero");
+        if (bigAngle <= 0 || bigAngle >= 180) {
+           throw new RuntimeException("Angle of quadrilateral can't be less than zero or higher than 180");
         } else {
             this.bigAngle = bigAngle;
         }
@@ -42,10 +42,6 @@ public class Parallelogram extends QuadrilateralImpl {
     }
 
     public void setLessAngle(double lessAngle) {
-        if (getBigAngle() + lessAngle != 180 || lessAngle <= 0) {
-            throw new RuntimeException("Sum of 2 angels of parallelogram must equals 180 ");
-        } else {
-            this.lessAngle = lessAngle;
-        }
+        this.lessAngle = 180 - getBigAngle();
     }
 }

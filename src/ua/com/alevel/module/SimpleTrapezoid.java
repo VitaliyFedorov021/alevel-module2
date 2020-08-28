@@ -6,7 +6,11 @@ public class SimpleTrapezoid extends TrapezoidImpl {
     }
 
     public void setBigBase(double bigBase) {
-        this.bigBase = bigBase;
+        if (bigBase <= 0) {
+            throw new RuntimeException("Size can't be less than zero");
+        } else {
+            this.bigBase = bigBase;
+        }
     }
 
     public double getLessBase() {
@@ -14,7 +18,11 @@ public class SimpleTrapezoid extends TrapezoidImpl {
     }
 
     public void setLessBase(double lessBase) {
-        this.lessBase = lessBase;
+        if (lessBase <= 0) {
+            throw new RuntimeException("Size can't be less than zero");
+        } else {
+            this.lessBase = lessBase;
+        }
     }
 
     public double getFirstSide() {
@@ -22,7 +30,11 @@ public class SimpleTrapezoid extends TrapezoidImpl {
     }
 
     public void setFirstSide(double firstSide) {
-        this.firstSide = firstSide;
+        if (firstSide <= 0) {
+            throw new RuntimeException("Size can't be less than zero");
+        } else {
+            this.firstSide = firstSide;
+        }
     }
 
     public double getSecondSide() {
@@ -30,7 +42,12 @@ public class SimpleTrapezoid extends TrapezoidImpl {
     }
 
     public void setSecondSide(double secondSide) {
-        this.secondSide = secondSide;
+        if (secondSide <= 0) {
+            throw new RuntimeException("Size can't be less than zero");
+        } else {
+            this.secondSide = secondSide;
+        }
+
     }
 
     public double getHigh() {
@@ -38,6 +55,10 @@ public class SimpleTrapezoid extends TrapezoidImpl {
     }
 
     public void setHigh(double high) {
-        this.high = high;
+        if (high <= 0) {
+            throw new RuntimeException("Size can't be less than zero");
+        } else {
+            this.high = high;
+        }
     }
 }
