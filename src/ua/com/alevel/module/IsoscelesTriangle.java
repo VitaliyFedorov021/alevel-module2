@@ -10,7 +10,7 @@ public class IsoscelesTriangle extends TriangleImpl {
             throw new RuntimeException("Size can't be less than zero");
         } else {
             this.firstSide = firstSide;
-            this.secondSide = secondSide;
+            this.secondSide = firstSide;
         }
     }
 

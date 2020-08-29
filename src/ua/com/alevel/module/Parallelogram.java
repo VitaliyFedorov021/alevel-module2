@@ -41,7 +41,7 @@ public class Parallelogram extends QuadrilateralImpl {
         return lessAngle;
     }
 
-    public void setLessAngle(double lessAngle) {
+    public void setLessAngle() {
         this.lessAngle = 180 - getBigAngle();
     }
 }

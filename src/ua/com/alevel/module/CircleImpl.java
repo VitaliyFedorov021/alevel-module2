@@ -35,7 +35,8 @@ public class CircleImpl implements Circle {
 
     @Override
     public double chord() {
-        return Math.abs(2 * radius * Math.sin(centreAngle));
+        double rad = Math.toRadians(centreAngle);
+        return Math.abs(2 * radius * Math.sin(rad));
     }
 
     @Override

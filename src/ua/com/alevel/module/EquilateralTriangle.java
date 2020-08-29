@@ -5,7 +5,7 @@ public class EquilateralTriangle extends TriangleImpl {
         return firstSide;
     }
 
-    public void setSides(double firstSide) {
+    public void setSides(double firstSide) throws RuntimeException {
         if (firstSide <= 0) {
             throw new RuntimeException("Size can't be less than zero");
         } else {

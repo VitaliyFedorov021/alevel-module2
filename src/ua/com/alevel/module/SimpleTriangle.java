@@ -6,7 +6,11 @@ public class SimpleTriangle extends TriangleImpl {
     }
 
     public void setFirstSide(double firstSide) {
-        this.firstSide = firstSide;
+        if (firstSide <= 0) {
+            throw new RuntimeException("Size can't be less than zero");
+        } else {
+            this.firstSide = firstSide;
+        }
     }
 
     public double getSecondSide() {
@@ -14,7 +18,11 @@ public class SimpleTriangle extends TriangleImpl {
     }
 
     public void setSecondSide(double secondSide) {
-        this.secondSide = secondSide;
+        if (secondSide <= 0) {
+            throw new RuntimeException("Size can't be less than zero");
+        } else {
+            this.secondSide = secondSide;
+        }
     }
 
     public double getThirdSide() {
@@ -22,6 +30,10 @@ public class SimpleTriangle extends TriangleImpl {
     }
 
     public void setThirdSide(double thirdSide) {
-        this.thirdSide = thirdSide;
+        if (thirdSide <= 0) {
+            throw new RuntimeException("Size can't be less than zero");
+        } else {
+            this.thirdSide = thirdSide;
+        }
     }
 }

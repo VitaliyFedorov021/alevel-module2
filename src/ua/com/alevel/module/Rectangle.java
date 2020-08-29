@@ -5,15 +5,20 @@ public class Rectangle extends QuadrilateralImpl {
         return firstSide;
     }
 
-    public void setSide(double firstSide) {
+    public void setFirstSide(double firstSide) {
         if (firstSide <= 0) {
             throw new RuntimeException("Side can't be less than zero");
         } else {
             this.firstSide = firstSide;
-            this.secondSide = firstSide;
         }
     }
-
+    public void setSecondSide(double secondSide) {
+        if (secondSide <= 0) {
+            throw new RuntimeException("Side can't be less than zero");
+        } else {
+            this.secondSide = secondSide;
+        }
+    }
     public double getAngle() {
         return bigAngle;
     }
