@@ -6,12 +6,12 @@ public abstract class TriangleImpl implements Triangle {
     @Override
     public double bisector() {
         double p = (firstSide + secondSide + thirdSide) / 2;
-        return (2 * Math.sqrt(firstSide * secondSide * p * (p - thirdSide))) / (firstSide + secondSide);
+        return (2 * Math.sqrt(Math.abs(firstSide * secondSide * p * (p - thirdSide))) / (firstSide + secondSide));
     }
 
     @Override
     public double median() {
-        return 0.5 * Math.sqrt(2 * secondSide * secondSide + 2 * thirdSide * thirdSide - firstSide * firstSide);
+        return 0.5 * Math.sqrt(Math.abs(2 * secondSide * secondSide + 2 * thirdSide * thirdSide - firstSide * firstSide));
     }
 
     @Override
@@ -27,7 +27,7 @@ public abstract class TriangleImpl implements Triangle {
     @Override
     public double square() {
         double p = (firstSide + secondSide + thirdSide) / 2;
-        double result = Math.sqrt(p * (p - firstSide) * (p - secondSide) * (p - thirdSide));
+        double result = Math.sqrt(Math.abs(p * (p - firstSide) * (p - secondSide) * (p - thirdSide)));
         return result;
     }
 

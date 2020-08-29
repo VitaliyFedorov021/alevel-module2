@@ -23,12 +23,12 @@ public abstract class QuadrilateralImpl implements Quadrilateral {
     @Override
     public double firstDiagonal() {
         double rad = Math.toRadians(lessAngle);
-        return Math.abs(Math.sqrt(firstSide * firstSide + secondSide * secondSide * - 2 * firstSide * secondSide * Math.cos(rad)));
+        return Math.abs(Math.sqrt(Math.abs(firstSide * firstSide + secondSide * secondSide * - 2 * firstSide * secondSide * Math.cos(rad))));
     }
 
     @Override
     public double secondDiagonal() {
         double rad = Math.toRadians(lessAngle);
-        return Math.abs(Math.sqrt(firstSide * firstSide + secondSide * secondSide * + 2 * firstSide * secondSide * Math.cos(rad)));
+        return Math.abs(Math.sqrt(Math.abs(firstSide * firstSide + secondSide * secondSide * + 2 * firstSide * secondSide * Math.cos(rad))));
     }
 }

@@ -1,6 +1,6 @@
 package ua.com.alevel.module;
 
-public abstract class TrapezoidImpl {
+public abstract class TrapezoidImpl implements Trapezoid {
     protected double bigBase, lessBase, firstSide, secondSide, high;
 
     public double square() {
@@ -12,10 +12,10 @@ public abstract class TrapezoidImpl {
     }
 
     public double firstDiagonal() {
-        return Math.sqrt(bigBase + secondSide  - (2 * bigBase) * Math.sqrt(secondSide - high));
+        return Math.sqrt(Math.abs(bigBase + secondSide  - (2 * bigBase)) * Math.sqrt(Math.abs(secondSide - high)));
     }
     public double secondDiagonal() {
-        return Math.sqrt(bigBase + firstSide  - (2 * bigBase) * Math.sqrt(firstSide - high));
+        return Math.sqrt(Math.abs(bigBase + firstSide  - (2 * bigBase)) * Math.sqrt(Math.abs(firstSide - high)));
     }
     
 }
