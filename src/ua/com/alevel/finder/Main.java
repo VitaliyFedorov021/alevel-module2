@@ -1,7 +1,7 @@
-package ua.com.alevel.module;
+package ua.com.alevel.finder;
 
 public class Main {
     public static void main(String[] args) {
-        new RunProgram().runProgram();
+        new RunProgram().action();
     }
 }
